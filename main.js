@@ -6,7 +6,7 @@ bienvenidaUser()
 function menuTest(){
     let salirMenu = true
     do{
-        let opcionMenu = prompt(`Elegir tu personaje favorito
+        let opcionMenu = prompt(`Elegi tu personaje favorito (Presiona el numero que corresponda)
             1 - Dark Knight
             2 - Dark Wizard
             3 - Fairy Elf
