@@ -11,9 +11,8 @@ function bienvenidaUser(){
 }
 bienvenidaUser()
 
-function establecerPj (){
-
-}
+//en proceso
+//function restablecerPj (){}
 
 /* ---------------------------------- MENU ---------------------------------- */
 salirMenu = true
