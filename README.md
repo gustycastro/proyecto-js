@@ -1,2 +1,2 @@
 # proyecto-javascript-coderhouse
-PreEntrega1 Castro
+PreEntrega2 Castro
