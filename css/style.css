@@ -1,5 +1,48 @@
 * {
-    background-color: blueviolet;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+/* --------------------------------- HEADER --------------------------------- */
+.btn-outline-success{
+    --bs-btn-color: #5b5e5c;
+    --bs-btn-border-color: #5b5e5c;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #5b5e5c;
+    --bs-btn-hover-border-color: #5b5e5c;
+    --bs-btn-focus-shadow-rgb: 25,135,84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #5b5e5c;
+    --bs-btn-active-border-color: #5b5e5c;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #5b5e5c;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #5b5e5c;
+    --bs-gradient: none;
+}
+
+/* ---------------------------------- MAIN ---------------------------------- */
+.img__fondo{
+    background-image: url(img/fondoindex.jpg);
+    background-repeat: no-repeat;   
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.border{
+    border: 1px solid;
+    background-color: #212529;
+    padding: 500px;
+    margin: 150px;
+}
+
+
+/* --------------------------------- FOOTER --------------------------------- */
+p{
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
 }
