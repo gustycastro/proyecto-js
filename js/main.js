@@ -17,7 +17,7 @@ function preguntas1(){
         do{
             personajes = prompt(`¿Como se llama su ultima evolucion? Chance N° ${contador1}`)
             if(personajes.toLowerCase() == "blade master"){
-                alert(`Felicitaciones, tu respuesta es correcta y es ${personajes}`)
+                alert(`Felicitaciones, tu respuesta es correcta y es Blade Master`)
                 preguntas1 = true
             }
             else{
@@ -33,7 +33,7 @@ function preguntas1(){
         do{
             personajes = prompt(`¿De que color es su pelo? Chance N° ${contador1}`)
             if(personajes.toLowerCase() == "marron"){
-                alert(`Felicitaciones, tu respuesta es correcta y es ${personajes}`)
+                alert(`Felicitaciones, tu respuesta es correcta y es marron`)
                 preguntas1 = true
             }else{
                 alert(`Tu respuesta es incorrecta. Siga intentado`)
@@ -51,14 +51,14 @@ function preguntas2(){
         do{
             personajes = prompt(`¿Como se llama su ultima evolucion? Chance N° ${contador2}`)
             if(personajes.toLowerCase() == "grand master"){
-                alert(`Felicitaciones, tu respuesta es correcta y es ${personajes}`)
+                alert(`Felicitaciones, tu respuesta es correcta y es Grand Master`)
                 preguntas2 = true
             }
             else{
                 alert(`Tu respuesta es incorrecta. Siga intentado`)
                 contador2++
                 if(contador2 == 4){
-                    alert(`Has perdido. La respuesta correcta era grand master`)
+                    alert(`Has perdido. La respuesta correcta era Grand Master`)
                 }
             }
         }while(!preguntas2 && contador2 < 4)
@@ -67,7 +67,7 @@ function preguntas2(){
         do{
             personajes = prompt(`¿De que color es su pelo? Chance N° ${contador2}`)
             if(personajes.toLowerCase() == "gris"){
-                alert(`Felicitaciones, tu respuesta es correcta y es ${personajes}`)
+                alert(`Felicitaciones, tu respuesta es correcta y es gris`)
                 preguntas2 = true
             }else{
                 alert(`Tu respuesta es incorrecta. Siga intentado`)
@@ -85,7 +85,7 @@ function preguntas3(){
         do{
             personajes = prompt(`¿Como se llama su ultima evolucion? Chance N° ${contador3}`)
             if(personajes.toLowerCase() == "high elf"){
-                alert(`Felicitaciones, tu respuesta es correcta y es ${personajes}`)
+                alert(`Felicitaciones, tu respuesta es correcta y es High Elf`)
                 preguntas3 = true
             }
             else{
@@ -101,7 +101,7 @@ function preguntas3(){
         do{
             personajes = prompt(`¿De que color es su pelo? Chance N° ${contador3}`)
             if(personajes.toLowerCase() == "amarillo"){
-                alert(`Felicitaciones, tu respuesta es correcta y es ${personajes}`)
+                alert(`Felicitaciones, tu respuesta es correcta y es amarillo`)
                 preguntas3 = true
             }else{
                 alert(`Tu respuesta es incorrecta. Siga intentado`)
@@ -119,7 +119,7 @@ function preguntas4(){
         do{
             personajes = prompt(`¿Como se llama su ultima evolucion? Chance N° ${contador4}`)
             if(personajes.toLowerCase() == "duel master"){
-                alert(`Felicitaciones, tu respuesta es correcta y es ${personajes}`)
+                alert(`Felicitaciones, tu respuesta es correcta y es Duel Master`)
                 preguntas4 = true
             }
             else{
@@ -135,7 +135,7 @@ function preguntas4(){
         do{
             personajes = prompt(`¿De que color es su pelo? Chance N° ${contador4}`)
             if(personajes.toLowerCase() == "rojo"){
-                alert(`Felicitaciones, tu respuesta es correcta y es ${personajes}`)
+                alert(`Felicitaciones, tu respuesta es correcta y es rojo`)
                 preguntas4 = true
             }else{
                 alert(`Tu respuesta es incorrecta. Siga intentado`)
@@ -153,7 +153,7 @@ function preguntas5(){
         do{
             personajes = prompt(`¿Como se llama su ultima evolucion? Chance N° ${contador5}`)
             if(personajes.toLowerCase() == "lord emperor"){
-                alert(`Felicitaciones, tu respuesta es correcta y es ${personajes}`)
+                alert(`Felicitaciones, tu respuesta es correcta y es Lord Emperor`)
                 preguntas5 = true
             }
             else{
@@ -169,7 +169,7 @@ function preguntas5(){
         do{
             personajes = prompt(`¿De que color es su pelo? Chance N° ${contador5}`)
             if(personajes.toLowerCase() == "blanco"){
-                alert(`Felicitaciones, tu respuesta es correcta y es ${personajes}`)
+                alert(`Felicitaciones, tu respuesta es correcta y es blanco`)
                 preguntas5 = true
             }else{
                 alert(`Tu respuesta es incorrecta. Siga intentado`)
@@ -187,7 +187,7 @@ function preguntas6(){
         do{
             personajes = prompt(`¿Como se llama su ultima evolucion? Chance N° ${contador6}`)
             if(personajes.toLowerCase() == "dimension master"){
-                alert(`Felicitaciones, tu respuesta es correcta y es ${personajes}`)
+                alert(`Felicitaciones, tu respuesta es correcta y es Dimension Master`)
                 preguntas6 = true
             }
             else{
@@ -203,7 +203,7 @@ function preguntas6(){
         do{
             personajes = prompt(`¿De que color es su pelo? Chance N° ${contador6}`)
             if(personajes.toLowerCase() == "violeta"){
-                alert(`Felicitaciones, tu respuesta es correcta y es ${personajes}`)
+                alert(`Felicitaciones, tu respuesta es correcta y es violeta`)
                 preguntas6 = true
             }else{
                 alert(`Tu respuesta es incorrecta. Siga intentado`)
