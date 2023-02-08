@@ -51,17 +51,25 @@
     width: 100%;
     height: 100vh;
 }
+.fondo__toggle{
+    background-image: url(img/fondoindex2.jpg);
+    background-repeat: no-repeat;   
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+}
 .capa__main{
     box-shadow: 0px 0px 20px 10px whitesmoke;
     background-color: #212529;
-    opacity: 95%;
+    opacity: 90%;
     position: relative;
     margin: 100px 200px;
     
 }
 .capa__main h1{
-    text-shadow: 0px 0px 10px blue;
-    text-decoration: underline;
+    font-variant: small-caps;
     position: absolute;
     color: black;
     font-weight: bold;
@@ -74,9 +82,10 @@
     position: absolute;
     color: black;
     font-weight: bold;
+    font-variant: small-caps;
     font-size: 40px;
     overflow-y: hidden;
-    margin-left: 350px;
+    margin-left: 380px;
     padding-top: 22px;
 }
 .portada{

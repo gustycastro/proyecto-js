@@ -218,7 +218,7 @@ function preguntas6(){
         }while(!preguntas6 && contador6 < 4)
 }
 
-//Menu de personajes
+//Menu de preguntas
 function menuPj(){
     let salirMenu = false
     do{
@@ -334,6 +334,7 @@ function verWebShop(array){
 verWebShop(webShop)
 
 /* --------------------------------- EVENTOS -------------------------------- */
+//test preguntas
 testBtn.onclick = function(){
     menuPj(preguntarPersonajes)
 }
