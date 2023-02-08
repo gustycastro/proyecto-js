@@ -1,18 +1,27 @@
 let btnToggle = document.getElementById("fondoToggle")
+let fondo = JSON.parse(localStorage.getItem("fondoNuevo")) || false;
 
-if(localStorage.getItem("fondoNuevo")){
-
-}else{
-    localStorage.setItem("fondoNuevo", false)
+if(fondo){
+    document.body.classList.add("fondo__toggle")
+}
+if(!fondo){
+    document.body.classList.remove("fondo__toggle")
 }
 
+
 btnToggle.addEventListener("click", ()=>{
-    document.body.classList.toggle("fondo__toggle")
-    if(JSON.parse(localStorage.getItem("fondoNuevo")) == false){
+    if(fondo === false){
+        document.body.classList.add("fondo__toggle")
+        fondo = true;
         btnToggle.innerText = `Fondo Original`
-        localStorage.setItem("fondoNuevo", true)
-    }else{
-        btnToggle.innerText = `Cambiar Fondo`
-        localStorage.setItem("fondoNuevo", false)
+        localStorage.setItem('fondoNuevo', JSON.stringify(fondo));
     }
+    
+    else if(fondo === true) {
+        document.body.classList.remove("fondo__toggle");
+        fondo = false;
+        btnToggle.innerText = `Cambiar Fondo`
+        localStorage.setItem('fondoNuevo', JSON.stringify(fondo));
+        
+    }    
 })

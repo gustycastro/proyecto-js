@@ -2,6 +2,7 @@
 /* -------------------------------- VARIABLES ------------------------------- */
 
 let personajes = ""
+let inputBuscador = document.getElementById("buscar")
 let testBtn = document.getElementById("testBtn")
 let shopDiv = document.getElementById("shop")
 
@@ -275,7 +276,7 @@ function mostrarItems(array){
 }
 mostrarItems(webShop)
 
-function buscarPorPersonaje(array){
+/*function buscarPorPersonaje(array){
     let personajeBuscado = prompt("Ingrese el nombre del personaje deseado")
     let busqueda = array.filter(
         (raza) => raza.personaje.toLowerCase() == personajeBuscado.toLowerCase()
@@ -285,10 +286,18 @@ function buscarPorPersonaje(array){
     }else{
         mostrarItems(busqueda)
     }
-}
-buscarPorPersonaje(webShop)
+} */
 
-function buscarPorItems(array){
+//buscador input
+function buscarInfo(buscado, array){
+    let busqueda = array.filter(
+        (items)=> items.personaje.toLowerCase() == buscado.toLowerCase() || items.nombre.toLowerCase() ==buscado,toLowerCase()
+    )
+    verWebShop(busqueda)
+}
+
+
+/*function buscarPorItems(array){
     let itemBuscado = prompt("Ingrese el nombre del item deseado")
     let itemEncontrado = array.find(
         (item) => item.nombre.toLowerCase() == itemBuscado.toLowerCase()
@@ -298,8 +307,8 @@ function buscarPorItems(array){
     }else{
         console.log(itemEncontrado)
     }
-}
-buscarPorItems(webShop)
+} */
+
 
 function ordenarMenorMayor(array){
     const menorMayor = [].concat(array)
@@ -338,6 +347,11 @@ verWebShop(webShop)
 testBtn.onclick = function(){
     menuPj(preguntarPersonajes)
 }
+
+//buscador
+inputBuscador.addEventListener("input", ()=>{
+    buscarInfo(inputBuscador.value, webShop)
+})
 
 
 
