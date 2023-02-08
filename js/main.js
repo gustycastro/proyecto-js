@@ -288,15 +288,6 @@ mostrarItems(webShop)
     }
 } */
 
-//buscador input
-function buscarInfo(buscado, array){
-    let busqueda = array.filter(
-        (items)=> items.personaje.toLowerCase() == buscado.toLowerCase() || items.nombre.toLowerCase() ==buscado,toLowerCase()
-    )
-    verWebShop(busqueda)
-}
-
-
 /*function buscarPorItems(array){
     let itemBuscado = prompt("Ingrese el nombre del item deseado")
     let itemEncontrado = array.find(
@@ -333,15 +324,20 @@ function verWebShop(array){
         `
         shopDiv.appendChild(nuevoItemShop)
         let agregarBtn = document.getElementById(`agregarBtn${items.id}`)
-        console.log(agregarBtn)
         agregarBtn.onclick = ()=>{
-            console.log(items)
             alert(`${items.nombre} ha sido agregado al carrito`)
         }
     }
 }
 verWebShop(webShop)
 
+//buscador input
+function buscarInfo(buscado, array){
+    let busqueda = array.filter(
+        (items)=> items.personaje.toLowerCase() == buscado.toLowerCase() || items.nombre.toLowerCase() ==buscado.toLowerCase()
+    )
+    verWebShop(busqueda)
+}
 /* --------------------------------- EVENTOS -------------------------------- */
 //test preguntas
 testBtn.onclick = function(){
@@ -350,6 +346,7 @@ testBtn.onclick = function(){
 
 //buscador
 inputBuscador.addEventListener("input", ()=>{
+    console.log(inputBuscador.value)
     buscarInfo(inputBuscador.value, webShop)
 })
 
