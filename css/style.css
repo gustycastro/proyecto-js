@@ -134,7 +134,7 @@
     font-weight: bolder;
 }
 
-.shop{
+.shop__items{
     margin-top: 100px;
 }
 .shop__border{
@@ -144,6 +144,10 @@
     align-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+}
+.shop__border img{
+    width: 150px;
+    height: 150px;
 }
 .shop__border p{
     color: black;

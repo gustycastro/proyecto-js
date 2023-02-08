@@ -2,6 +2,9 @@
 /* -------------------------------- VARIABLES ------------------------------- */
 
 let personajes = ""
+let testBtn = document.getElementById("testBtn")
+let shopDiv = document.getElementById("shop")
+
 
 /* ---------------------------- FUNCIONES --------------------------- */
 //Cartel Bienvenida
@@ -262,7 +265,6 @@ function preguntarPersonajes(salir){
         break             
     }
 }
-menuPj()
 
 //WebShop
 function mostrarItems(array){
@@ -305,6 +307,41 @@ function ordenarMenorMayor(array){
     mostrarItems(menorMayor)
 }
 ordenarMenorMayor(webShop)
+
+//Dom WebShop
+function verWebShop(array){
+    for(let items of array){
+        let nuevoItemShop = document.createElement("div")
+        nuevoItemShop.innerHTML = `
+        <div id="${items.id}" class="row shop">
+            <div class="shop__border">
+                <img src="./css/img/${items.imagen}" alt="">
+                <p>${items.nombre}</p>
+                <p>${items.precio} cash</p>
+                <button id="agregarBtn${items.id}" type="button" class="btn btn-primary">Comprar</button>
+            </div>
+        </div>
+        `
+        shopDiv.appendChild(nuevoItemShop)
+        let agregarBtn = document.getElementById(`agregarBtn${items.id}`)
+        console.log(agregarBtn)
+        agregarBtn.onclick = ()=>{
+            console.log(items)
+            alert(`${items.nombre} ha sido agregado al carrito`)
+        }
+    }
+}
+verWebShop(webShop)
+
+/* --------------------------------- EVENTOS -------------------------------- */
+testBtn.onclick = function(){
+    menuPj(preguntarPersonajes)
+}
+
+
+
+
+
 
 
 

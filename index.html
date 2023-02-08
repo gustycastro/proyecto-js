@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mu online</title>
+    <!-- --------- ICONOS --------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- --------- BOOTSTRAP ---------- -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- --------- CSS PROPIO ---------- -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="img__fondo">
@@ -21,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
                     <form class="d-flex">
-                        <input id="buscador"class="form-control me-2" placeholder="Buscar por personajes/item" aria-label="Search">
+                        <input id="buscar"class="form-control me-2" placeholder="Buscar por personajes/item" aria-label="Search">
                         <button id="btnBuscar" class="btn btn-outline-success">Buscar</button>
                     </form> 
                     </ul>
@@ -52,193 +55,18 @@
                     </div>
                     <div class="test__pj">
                         <p>¿Cuanto sabes de Mu Online Season 4? Haz tu test precionando en:</p>
-                        <a type="button" class="btn btn-secondary">¡Comenzar!</button></a>
+                        <a type="button" id="testBtn" class="btn btn-secondary">¡Comenzar!</button></a>
                     </div>
                     <div class="carro__items">
                         <p>Tus compras</p>
-                        <a href=""><button type="button" class="btn btn-dark"><i class="fa-solid fa-cart-shopping"></i></button></i></a>
-                    </div>
-                </div>    
-            </div>
-            <h2>WEBSHOP</h2>
-            <div class="conteiner">
-                <div class="row row-cols-5 shop">
-                    <div class="col shop__border">
-                        <img src="./css/img/wing of strom.jpg" alt="">
-                        <p>Wing of Strom</p>
-                        <p>500 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/wing of eternal.jpg" alt="">
-                        <p>Wing of Eternal</p>
-                        <p>500 coin</p> 
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/wing of ilusion.jpg" alt="">
-                        <p>Wing of Ilusion</p>
-                        <p>500 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/wing of destruction.jpg" alt="">
-                        <p>Wing of Destruction</p>
-                        <p>500 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/cloak of emperor.jpg" alt="">
-                        <p>Cloak of Emperor</p>
-                        <p>500 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/wing of dimension.jpg" alt="">
-                        <p>Wing of Dimension</p>
-                        <p>500 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/set brave.jpg" alt="">
-                        <p>Set Brave</p>
-                        <p>1000 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/set hades.jpg" alt="">
-                        <p>Set Hades</p>
-                        <p>1000 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/set divine.jpg" alt="">
-                        <p>Set Divine</p>
-                        <p>1000 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/set phatom.jpg" alt="">
-                        <p>Set Phatom</p>
-                        <p>1000 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/set royal.jpg" alt="">
-                        <p>Set Royal</p>
-                        <p>1000 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/set queen.jpg" alt="">
-                        <p>Set Queen</p>
-                        <p>1000 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/sword breaker.jpg" alt="">
-                        <p>Sword Breaker</p>
-                        <p>300 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/imberial staff.jpg" alt="">
-                        <p>Imberial Staff</p>
-                        <p>300 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/dark stringer.jpg" alt="">
-                        <p>Dark Stinger</p>
-                        <p>300 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/rune bastard sword.jpg" alt="">
-                        <p>Rune Bastard Sword</p>
-                        <p>300 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/scepter.jpg" alt="">
-                        <p>Absolute Scepter</p>
-                        <p>300 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/stick.jpg" alt="">
-                        <p>Demonic Stick</p>
-                        <p>300 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/crymson glory.jpg" alt="">
-                        <p>Crymson Glory</p>
-                        <p>350 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/guardian shield.jpg" alt="">
-                        <p>Guardian Shield</p>
-                        <p>350 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/salamander shield.jpg" alt="">
-                        <p>Salamander Shield</p>
-                        <p>350 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/cross shield.jpg" alt="">
-                        <p>Cross Shield</p>
-                        <p>350 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/book.jpg" alt="">
-                        <p>Book of Lagle</p>
-                        <p>350 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/ring of wind.jpg" alt="">
-                        <p>Ring of Wind</p>
-                        <p>50 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/ring of fire.jpg" alt="">
-                        <p>Ring of Fire</p>
-                        <p>50 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/ring of ice.jpg" alt="">
-                        <p>Ring of Ice</p>
-                        <p>50 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/pendant of wind.jpg" alt="">
-                        <p>Pendant of Wind</p>
-                        <p>50 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/pendant of fire.jpg" alt="">
-                        <p>Pendant of Fire</p>
-                        <p>50 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
-                    </div>
-                    <div class="col shop__border">
-                        <img src="./css/img/pendant of ice.jpg" alt="">
-                        <p>Pendant of Ice</p>
-                        <p>50 coin</p>
-                        <a href=""><button type="button" class="btn btn-primary">Comprar</button></a>
+                        <button type="button" class="btn btn-dark"><i class="fa-solid fa-cart-shopping"></i></button></i>
                     </div>
                 </div>
             </div>
+            <h2>WEBSHOP</h2>
+                <div class="conteiner">
+                    <div id="shop" class="row row-cols-5 shop__items"></div>    
+                </div>    
         </section>
     </main>
 
@@ -246,7 +74,9 @@
         <p class="footer__p">COPYRIGHT © 2023 | Diseño y desarrollo con 💖 por Gustavo Castro.</p>
     </footer>
     
+    <!-- --------- SCRIPT BOOTSTRAP ---------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- --------- SCRIPT PROPIOS ---------- -->
     <script src="js/class.js"></script>
     <script src="js/main.js"></script>
 </body>
