@@ -3,12 +3,12 @@
 
 let personajes = ""
 let inputBuscador = document.getElementById("buscar")
-let testBtn = document.getElementById("testBtn")
 let shopDiv = document.getElementById("shop")
 let menorPrecio = document.getElementById("menorPrecio")
 let modalbBodyCarrito = document.getElementById("modal__bodyCarrito")
 let btnCarrito = document.getElementById("btnCarrito")
 let precioTotal = document.getElementById("precioTotal")
+let preguntasDiv = document.getElementById("preg")
 
 
 /* ---------------------------- FUNCIONES --------------------------- */
@@ -358,12 +358,21 @@ function verWebShop(array){
 }
 verWebShop(webShop)
 
-/* --------------------------------- EVENTOS -------------------------------- */
-//test preguntas
-testBtn.onclick = function(){
-    menuPj(preguntarPersonajes)
+//Test de preguntas
+function cargarPreguntas(array){
+    for(let preguntas of array){
+        let nuevaPregunta = document.createElement("div")
+        nuevaPregunta.innerHTML = `
+        <div id="${preguntas.id} class="form-check row">
+            <h3>${preguntas.pregunta} </h3>
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">${preguntas.respuesta}${preguntas.distractores}</label>
+        </div>`
+        preguntasDiv.appendChild(nuevaPregunta)
+    }
 }
-
+cargarPreguntas(basePreguntas)
+/* --------------------------------- EVENTOS -------------------------------- */
 //buscador
 inputBuscador.addEventListener("input", ()=>{
     buscarInfo(inputBuscador.value, webShop)
