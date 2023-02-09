@@ -5,6 +5,10 @@ let personajes = ""
 let inputBuscador = document.getElementById("buscar")
 let testBtn = document.getElementById("testBtn")
 let shopDiv = document.getElementById("shop")
+let menorPrecio = document.getElementById("menorPrecio")
+let modalbBodyCarrito = document.getElementById("modal__bodyCarrito")
+let btnCarrito = document.getElementById("btnCarrito")
+let precioTotal = document.getElementById("precioTotal")
 
 
 /* ---------------------------- FUNCIONES --------------------------- */
@@ -14,7 +18,16 @@ function bienvenidaUser(){
 }
 bienvenidaUser()
 
+//buscador input
+function buscarInfo(buscado, array){
+    let busqueda = array.filter(
+        (items)=> items.personaje.toLowerCase().includes(buscado.toLowerCase()) || items.nombre.toLowerCase().includes(buscado.toLowerCase())
+    )
+    verWebShop(busqueda)
+}
+
 //Preguntas iteractivas para el usuario (mas agregados en proceso)
+//Dark Knight
 function preguntas1(){
     let preguntas1 = false
     let contador1 = 1
@@ -48,7 +61,7 @@ function preguntas1(){
             }
         }while(!preguntas1 && contador1 < 4)
 }
-
+//Dark Wizard
 function preguntas2(){
     let preguntas2 = false
     let contador2 = 1
@@ -82,7 +95,7 @@ function preguntas2(){
             }
         }while(!preguntas2 && contador2 < 4)
 }
-
+//Fairy Elf
 function preguntas3(){
     let preguntas3 = false
     let contador3 = 1
@@ -116,7 +129,7 @@ function preguntas3(){
             }
         }while(!preguntas3 && contador3 < 4)
 }
-
+//Magic Gladiator
 function preguntas4(){
     let preguntas4 = false
     let contador4 = 1
@@ -150,7 +163,7 @@ function preguntas4(){
             }
         }while(!preguntas4 && contador4 < 4)
 }
-
+//Dark Lord
 function preguntas5(){
     let preguntas5 = false
     let contador5 = 1
@@ -184,7 +197,7 @@ function preguntas5(){
             }
         }while(!preguntas5 && contador5 < 4)
 }
-
+//Summoner
 function preguntas6(){
     let preguntas6 = false
     let contador6 = 1
@@ -267,49 +280,63 @@ function preguntarPersonajes(salir){
     }
 }
 
-//WebShop
-function mostrarItems(array){
-    console.log("Los items disponibles son:")
-    for(let items of array){
-        console.log(items.id, items.personaje, items.nombre, items.precio)
-    }
+//carrito de compras
+let itemsEnCarrito
+if(localStorage.getItem("carrito")){
+    itemsEnCarrito = JSON.parse(localStorage.getItem("carrito"))
+}else{
+    itemsEnCarrito = []
+    localStorage.getItem("carrito")
 }
-mostrarItems(webShop)
-
-/*function buscarPorPersonaje(array){
-    let personajeBuscado = prompt("Ingrese el nombre del personaje deseado")
-    let busqueda = array.filter(
-        (raza) => raza.personaje.toLowerCase() == personajeBuscado.toLowerCase()
-    )
-    if(busqueda.length == 0){
-        console.log(`${personajeBuscado} no existe`)
+function agregarAlCarrito(items){
+    let itemAgregado = itemsEnCarrito.find((elem)=>elem.id == items.id)
+    if(itemAgregado == undefined){
+        alert(`${items.nombre} ha sido agregado al carrito`)
+        itemsEnCarrito.push(items)
+        localStorage.setItem("carrito", JSON.stringify(itemsEnCarrito))
     }else{
-        mostrarItems(busqueda)
+        alert("Ya se encuentra en el carrito")
     }
-} */
+    
+}
 
-/*function buscarPorItems(array){
-    let itemBuscado = prompt("Ingrese el nombre del item deseado")
-    let itemEncontrado = array.find(
-        (item) => item.nombre.toLowerCase() == itemBuscado.toLowerCase()
-    )
-    if(itemEncontrado == undefined){
-        console.log(`${itemBuscado} no existe`)
-    }else{
-        console.log(itemEncontrado)
+function compraTotal(array){
+    let sumaTotal = 0
+    for(let items of array){
+        sumaTotal = sumaTotal + items.precio
     }
-} */
+    precioTotal.innerHTML= `El precio total es: ${sumaTotal} cash`
+}
 
+//agregar items en carrito
+function agregarItemsCarrito(array){
+    modalbBodyCarrito.innerHTML = ""
+    array.forEach((itemsCarrito) => {
+        modalbBodyCarrito.innerHTML +=`
+        <div class="card border-primary mb-3" id ="itemsCarrito${itemsCarrito.id}" style="max-width: 300px;">
+            <img class="card-img-top" height="300px" src="./css/img/${itemsCarrito.imagen}" alt="${itemsCarrito.nombre}">
+            <div class="card-body">
+                    <h4 class="card-title">${itemsCarrito.nombre}</h4>
+                    <p class="card-text">$${itemsCarrito.precio}</p> 
+                    <button class= "btn btn-danger" id="botonEliminar${itemsCarrito.id}"><i class="fas fa-trash-alt"></i></button>
+            </div>    
+        </div>`
+        
+    })
+    compraTotal(array)
+}
 
+//ordenar precio
 function ordenarMenorMayor(array){
     const menorMayor = [].concat(array)
     menorMayor.sort((parametro1, parametro2) => parametro1.precio - parametro2.precio)
-    mostrarItems(menorMayor)
+    verWebShop(menorMayor)
 }
-ordenarMenorMayor(webShop)
 
+//WebShop
 //Dom WebShop
 function verWebShop(array){
+    shopDiv.innerHTML = ""
     for(let items of array){
         let nuevoItemShop = document.createElement("div")
         nuevoItemShop.innerHTML = `
@@ -325,19 +352,12 @@ function verWebShop(array){
         shopDiv.appendChild(nuevoItemShop)
         let agregarBtn = document.getElementById(`agregarBtn${items.id}`)
         agregarBtn.onclick = ()=>{
-            alert(`${items.nombre} ha sido agregado al carrito`)
+            agregarAlCarrito(items)
         }
     }
 }
 verWebShop(webShop)
 
-//buscador input
-function buscarInfo(buscado, array){
-    let busqueda = array.filter(
-        (items)=> items.personaje.toLowerCase() == buscado.toLowerCase() || items.nombre.toLowerCase() ==buscado.toLowerCase()
-    )
-    verWebShop(busqueda)
-}
 /* --------------------------------- EVENTOS -------------------------------- */
 //test preguntas
 testBtn.onclick = function(){
@@ -346,14 +366,19 @@ testBtn.onclick = function(){
 
 //buscador
 inputBuscador.addEventListener("input", ()=>{
-    console.log(inputBuscador.value)
     buscarInfo(inputBuscador.value, webShop)
 })
 
+//ordenar precio
+menorPrecio.addEventListener("change", ()=>{
+    if(menorPrecio.value == "1"){
+        ordenarMenorMayor(webShop)
+    }else{
+        verWebShop(webShop)
+    }
+})
 
-
-
-
-
-
-
+//boton carrito
+btnCarrito.addEventListener("click", ()=>{
+    agregarItemsCarrito(itemsEnCarrito)
+})

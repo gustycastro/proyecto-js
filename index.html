@@ -25,12 +25,11 @@
                     <ul class="navbar-nav me-auto">
                     <form class="d-flex">
                         <input id="buscar" class="form-control me-2" placeholder="Buscar por personajes/item" aria-label="Search">
-                        <button id="btnBuscar" class="btn btn-outline-success">Buscar</button>
                     </form> 
                     </ul>
                 </div>
                 <div>
-                    <button id="fondoToggle" class="btn btn-outline-success">Cambiar Fondo</button>
+                    <button id="fondoToggle" class="btn btn-secondary btn-sm ">Cambiar Fondo</button>
                 </div>
             </div> 
         </nav>
@@ -61,15 +60,48 @@
                     </div>
                     <div class="carro__items">
                         <p>Tus compras</p>
-                        <button type="button"><i class="fa-solid fa-cart-shopping"></i></button></i>
+                        <button id="btnCarrito" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-cart-shopping"></i></button></i>
                     </div>
                 </div>
+                <i class="fa-solid fa-cart-shopping"></i>
             </div>
-            <h2>Webshop</h2>
+            <div class="d-grid gap-2 d-md-flex justify-content-md">
+                <select class="btn-group btn-group-sm" id="menorPrecio">
+                    <option selected>Ordenar por:</option>
+                    <option value="1">Precio</option>
+                </select>
+            </div>
+            <div>
+                <h2>Webshop</h2>
+            </div>
                 <div class="conteiner">
                     <div id="shop" class="row row-cols-5 shop__items"></div>    
                 </div>    
         </section>
+
+        <!-- Modal Carrito -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Tus compras</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="modal__bodyCarrito" class="modal-body">
+
+                    </div>
+                    <div>
+                        <div class="row ml-ato">
+                            <p id="precioTotal"></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Finalizar compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
