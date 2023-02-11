@@ -33,7 +33,7 @@
 
 /* ---------------------------------- MAIN ---------------------------------- */
 .img__fondo{
-    background-image: url(img/fondoindex.jpg);
+    background-image: url(img/fondoIndex.png);
     background-repeat: no-repeat;   
     background-attachment: fixed;
     background-size: cover;
