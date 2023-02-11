@@ -64,7 +64,7 @@ function agregarItemsCarrito(array){
     compraTotal(array)
 }
 
-//ordenar precio
+//ordenar precio (de menor a mayor)
 function ordenarMenorMayor(array){
     const menorMayor = [].concat(array)
     menorMayor.sort((parametro1, parametro2) => parametro1.precio - parametro2.precio)
@@ -94,9 +94,7 @@ function verWebShop(array){
         }
     }
 }
-if(webShop){
-    verWebShop(webShop)
-}
+verWebShop(webShop)
 
 /* --------------------------------- EVENTOS -------------------------------- */
 //buscador
