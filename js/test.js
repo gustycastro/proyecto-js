@@ -39,8 +39,8 @@ function comenzarJuego(){
     posActual = 0
     cantidadAcertadas = 0
     //activamos las pantallas necesarias
-    document.getElementById("pantalla-inicial").style.display = "none"
-    document.getElementById("pantalla-juego").style.display = "block"
+    document.getElementById("pantalla__inicial").style.display = "none"
+    document.getElementById("pantalla__juego").style.display = "block"
     cargarPersonaje()
 }
 
@@ -90,8 +90,8 @@ function comprobarRespuesta(opElegida){
 }
 function terminarJuego(){
     //ocultamos las pantallas y mostramos la pantalla final
-    document.getElementById("pantalla-juego").style.display = "none"
-    document.getElementById("pantalla-final").style.display = "block"
+    document.getElementById("pantalla__juego").style.display = "none"
+    document.getElementById("pantalla__final").style.display = "block"
     //agreamos los resultados
     document.getElementById("numCorrectas").innerHTML = cantidadAcertadas
     document.getElementById("numIncorrectas").innerHTML = personajes.length - cantidadAcertadas
@@ -99,9 +99,9 @@ function terminarJuego(){
 
 function volverAlInicio(){
     //ocultamos las pantallas y activamos la inicial
-    document.getElementById("pantalla-final").style.display = "none"
-    document.getElementById("pantalla-inicial").style.display = "block"
-    document.getElementById("pantalla-juego").style.display = "none"
+    document.getElementById("pantalla__final").style.display = "none"
+    document.getElementById("pantalla__inicial").style.display = "block"
+    document.getElementById("pantalla__juego").style.display = "none"
 }
 
 /* --------------------------------- EVENTOS -------------------------------- */

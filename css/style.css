@@ -149,12 +149,12 @@
 
 /* -------------------------------- TEST PERSONAJES ------------------------------- */
 /* PANTALLA INICIO */
-#pantalla-inicial{
+#pantalla__inicial{
     display: block;
     text-align: center;
     font-size: 30px;
 }
-#pantalla-inicial{
+#pantalla__inicial{
     margin: 60px 0;
     color: black;
 }
@@ -167,14 +167,14 @@
     cursor: pointer;
 }
 /* PANTALLA juego */
-#pantalla-juego{
+#pantalla__juego{
     display: none;
 }
-.pantalla-juego{
+.pantalla__juego{
     margin: 50px auto;
     text-align: center;
 }
-.pantalla-juego img{
+.pantalla__juego img{
     max-width: 200px;
     width: 100%;
 }
@@ -233,17 +233,17 @@
 }
 
 /* PANTALLA final */
-#pantalla-final{
+#pantalla__final{
     display: none;
     text-align: center;
 }
-#pantalla-final #numCorrectas{
+#pantalla__final #numCorrectas{
     background-color: chartreuse;
     display: inline-block;
     width: 50px;
     height: 50px;
 }
-#pantalla-final #numIncorrectas{
+#pantalla__final #numIncorrectas{
     background-color: darkred;
     display: inline-block;
     width: 50px;
