@@ -1,8 +1,3 @@
-//Cartel Bienvenida
-function bienvenidaUser(){
-    alert(`Hola, Bienvenido/a a nuestro sitio de WebShop y Test de MuOnline Season 4`)
-}
-bienvenidaUser()
 
 /* -------------------------------- VARIABLES ------------------------------- */
 let botonComenzar = document.getElementById("btnComenzar")

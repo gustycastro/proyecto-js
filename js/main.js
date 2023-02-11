@@ -9,11 +9,6 @@ let btnCarrito = document.getElementById("btnCarrito")
 let precioTotal = document.getElementById("precioTotal")
 
 /* ---------------------------- FUNCIONES --------------------------- */
-//Cartel Bienvenida
-function bienvenidaUser(){
-    alert(`Hola, Bienvenido/a a nuestro sitio de WebShop y Test de MuOnline Season 4`)
-}
-bienvenidaUser()
 
 //buscador input
 function buscarInfo(buscado, array){
