@@ -49,5 +49,3 @@ if(localStorage.getItem("webShop")){
     webShop.push(wing1, wing2, wing3, wing4, wing5, wing6, set1, set2, set3, set4, set5, set6, arma1, arma2, arma3, arma4, arma5, arma6, shield1, shield2, shield3, shield4, shield5, ring1, ring2, ring3, pendant1, pendant2, pendant3, fenrir)
     localStorage.setItem("webShop", JSON.stringify(webShop))
 }
-
-
