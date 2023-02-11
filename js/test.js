@@ -123,6 +123,5 @@ opcion2.addEventListener("click", ()=>{
 })
 
 botonVolverInicio.addEventListener("click", ()=>{
-    console.log("Terminando")
-    terminarJuego()
+    volverAlInicio()
 })
