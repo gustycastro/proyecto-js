@@ -61,9 +61,9 @@ function comenzarJuego(){
     cargarPersonaje()
 }
 
-//funcion que carga la siguiente bandera y sus opciones
+//funcion que carga el siguiente personaje y sus opciones
 function cargarPersonaje(){
-    //controlo sis se acabaron las banderas
+    //controlo si se acabaron los personajes
     if(personajes.length <= posActual){
         terminarJuego()
     }
