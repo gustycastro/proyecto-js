@@ -50,22 +50,4 @@ if(localStorage.getItem("webShop")){
     localStorage.setItem("webShop", JSON.stringify(webShop))
 }
 
-class Preguntas{
-    constructor(id, pregunta, respuesta, distractores){
-        this.id = id,
-        this.pregunta = pregunta,
-        this.respuesta = respuesta,
-        this.distractores = distractores
-    }
-}
-
-const preg1 = new Preguntas(1, "¿Como se llama la ultima evolucion del personaje Dark Knight", "Blade Master","[`Grand Master`, `Duel Dimension`]")
-const preg2 = new Preguntas(2, "¿Como se llama la ultima evolucion del personaje Dark Wizard", "Grand Master", "[`Blanco`, `Amarillo`]")
-const preg3 = new Preguntas(3, "¿Como se llama la ultima evolucion del personaje Magic Gladiator", "Duel Dimension", "[`Azul`, `Negro`]")
-
-let basePreguntas = []
-basePreguntas.push(preg1, preg2, preg3)
-console.log(basePreguntas)
-
-
 

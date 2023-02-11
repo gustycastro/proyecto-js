@@ -8,8 +8,11 @@ let menorPrecio = document.getElementById("menorPrecio")
 let modalbBodyCarrito = document.getElementById("modal__bodyCarrito")
 let btnCarrito = document.getElementById("btnCarrito")
 let precioTotal = document.getElementById("precioTotal")
-let preguntasDiv = document.getElementById("preg")
-
+let botonComenzar = document.getElementById("btnComenzar")
+let botonVolverInicio = document.getElementById("btnVolverInicio")
+let opcion0 = document.getElementById("op0")
+let opcion1 = document.getElementById("op1")
+let opcion2 = document.getElementById("op2")
 
 /* ---------------------------- FUNCIONES --------------------------- */
 //Cartel Bienvenida
@@ -26,258 +29,96 @@ function buscarInfo(buscado, array){
     verWebShop(busqueda)
 }
 
-//Preguntas iteractivas para el usuario (mas agregados en proceso)
-//Dark Knight
-function preguntas1(){
-    let preguntas1 = false
-    let contador1 = 1
-        do{
-            personajes = prompt(`¿Como se llama su ultima evolucion? Chance N° ${contador1}`)
-            if(personajes.toLowerCase() == "blade master"){
-                alert(`Felicitaciones, tu respuesta es correcta y es Blade Master`)
-                preguntas1 = true
-            }
-            else{
-                alert(`Tu respuesta es incorrecta. Siga intentado`)
-                contador1++
-                if(contador1 == 4){
-                    alert(`Has perdido. La respuesta correcta era Blade Master`)
-                }
-            }
-        }while(!preguntas1 && contador1 < 4)
-    preguntas1 = false
-    contador1 = 1
-        do{
-            personajes = prompt(`¿De que color es su pelo? Chance N° ${contador1}`)
-            if(personajes.toLowerCase() == "marron"){
-                alert(`Felicitaciones, tu respuesta es correcta y es marron`)
-                preguntas1 = true
-            }else{
-                alert(`Tu respuesta es incorrecta. Siga intentado`)
-                contador1++
-                if(contador1 == 4){
-                    alert(`Has perdido. La respuesta correcta es marron`)
-                }
-            }
-        }while(!preguntas1 && contador1 < 4)
-}
-//Dark Wizard
-function preguntas2(){
-    let preguntas2 = false
-    let contador2 = 1
-        do{
-            personajes = prompt(`¿Como se llama su ultima evolucion? Chance N° ${contador2}`)
-            if(personajes.toLowerCase() == "grand master"){
-                alert(`Felicitaciones, tu respuesta es correcta y es Grand Master`)
-                preguntas2 = true
-            }
-            else{
-                alert(`Tu respuesta es incorrecta. Siga intentado`)
-                contador2++
-                if(contador2 == 4){
-                    alert(`Has perdido. La respuesta correcta era Grand Master`)
-                }
-            }
-        }while(!preguntas2 && contador2 < 4)
-    preguntas2 = false
-    contador2 = 1
-        do{
-            personajes = prompt(`¿De que color es su pelo? Chance N° ${contador2}`)
-            if(personajes.toLowerCase() == "gris"){
-                alert(`Felicitaciones, tu respuesta es correcta y es gris`)
-                preguntas2 = true
-            }else{
-                alert(`Tu respuesta es incorrecta. Siga intentado`)
-                contador2++
-                if(contador2 == 4){
-                    alert(`Has perdido. La respuesta correcta es gris`)
-                }
-            }
-        }while(!preguntas2 && contador2 < 4)
-}
-//Fairy Elf
-function preguntas3(){
-    let preguntas3 = false
-    let contador3 = 1
-        do{
-            personajes = prompt(`¿Como se llama su ultima evolucion? Chance N° ${contador3}`)
-            if(personajes.toLowerCase() == "high elf"){
-                alert(`Felicitaciones, tu respuesta es correcta y es High Elf`)
-                preguntas3 = true
-            }
-            else{
-                alert(`Tu respuesta es incorrecta. Siga intentado`)
-                contador3++
-                if(contador3 == 4){
-                    alert(`Has perdido. La respuesta correcta es High Elf`)
-                }
-            }
-        }while(!preguntas3 && contador3 < 4)
-    preguntas3 = false
-    contador3 = 1
-        do{
-            personajes = prompt(`¿De que color es su pelo? Chance N° ${contador3}`)
-            if(personajes.toLowerCase() == "amarillo"){
-                alert(`Felicitaciones, tu respuesta es correcta y es amarillo`)
-                preguntas3 = true
-            }else{
-                alert(`Tu respuesta es incorrecta. Siga intentado`)
-                contador3++
-                if(contador3 == 4){
-                    alert(`Has perdido. La respuesta correcta es amarillo`)
-                }
-            }
-        }while(!preguntas3 && contador3 < 4)
-}
-//Magic Gladiator
-function preguntas4(){
-    let preguntas4 = false
-    let contador4 = 1
-        do{
-            personajes = prompt(`¿Como se llama su ultima evolucion? Chance N° ${contador4}`)
-            if(personajes.toLowerCase() == "duel master"){
-                alert(`Felicitaciones, tu respuesta es correcta y es Duel Master`)
-                preguntas4 = true
-            }
-            else{
-                alert(`Tu respuesta es incorrecta. Siga intentado`)
-                contador4++
-                if(contador4 == 4){
-                    alert(`Has perdido. La respuesta correcta es Duel Master`)
-                }
-            }
-        }while(!preguntas4 && contador4 < 4)
-    preguntas4 = false
-    contador4 = 1
-        do{
-            personajes = prompt(`¿De que color es su pelo? Chance N° ${contador4}`)
-            if(personajes.toLowerCase() == "rojo"){
-                alert(`Felicitaciones, tu respuesta es correcta y es rojo`)
-                preguntas4 = true
-            }else{
-                alert(`Tu respuesta es incorrecta. Siga intentado`)
-                contador4++
-                if(contador4 == 4){
-                    alert(`Has perdido. La respuesta correcta es rojo`)
-                }
-            }
-        }while(!preguntas4 && contador4 < 4)
-}
-//Dark Lord
-function preguntas5(){
-    let preguntas5 = false
-    let contador5 = 1
-        do{
-            personajes = prompt(`¿Como se llama su ultima evolucion? Chance N° ${contador5}`)
-            if(personajes.toLowerCase() == "lord emperor"){
-                alert(`Felicitaciones, tu respuesta es correcta y es Lord Emperor`)
-                preguntas5 = true
-            }
-            else{
-                alert(`Tu respuesta es incorrecta. Siga intentado`)
-                contador5++
-                if(contador5 == 4){
-                    alert(`Has perdido. La respuesta correcta es Lord Emperor`)
-                }
-            }
-        }while(!preguntas5 && contador5 < 4)
-    preguntas5 = false
-    contador5 = 1
-        do{
-            personajes = prompt(`¿De que color es su pelo? Chance N° ${contador5}`)
-            if(personajes.toLowerCase() == "blanco"){
-                alert(`Felicitaciones, tu respuesta es correcta y es blanco`)
-                preguntas5 = true
-            }else{
-                alert(`Tu respuesta es incorrecta. Siga intentado`)
-                contador5++
-                if(contador5 == 4){
-                    alert(`Has perdido. La respuesta correcta es blanco`)
-                }
-            }
-        }while(!preguntas5 && contador5 < 4)
-}
-//Summoner
-function preguntas6(){
-    let preguntas6 = false
-    let contador6 = 1
-        do{
-            personajes = prompt(`¿Como se llama su ultima evolucion? Chance N° ${contador6}`)
-            if(personajes.toLowerCase() == "dimension master"){
-                alert(`Felicitaciones, tu respuesta es correcta y es Dimension Master`)
-                preguntas6 = true
-            }
-            else{
-                alert(`Tu respuesta es incorrecta. Siga intentado`)
-                contador6++
-                if(contador6 == 4){
-                    alert(`Has perdido. La respuesta correcta es Dimension Master`)
-                }
-            }
-        }while(!preguntas6 && contador6 < 4)
-    preguntas6 = false
-    contador6 = 1
-        do{
-            personajes = prompt(`¿De que color es su pelo? Chance N° ${contador6}`)
-            if(personajes.toLowerCase() == "violeta"){
-                alert(`Felicitaciones, tu respuesta es correcta y es violeta`)
-                preguntas6 = true
-            }else{
-                alert(`Tu respuesta es incorrecta. Siga intentado`)
-                contador6++
-                if(contador6 == 4){
-                    alert(`Has perdido. La respuesta correcta es violeta`)
-                }
-            }
-        }while(!preguntas6 && contador6 < 4)
+//Test de personajes
+//cargo en un array las imganes de los personajes. Este sera el orden que se mostrarán
+personajes = ["bladeMaster.jpg", "grandMaster.jpg", "fairyElf.jpg", "duelMaster.jpg", "lordEmperor.jpg", "summoner.jpg"]
+
+//array que guardara la opcion correcta
+let correcta = [2,2,1,1,0,0]
+
+//array que guardara los personajes a mostrar en cada jugada
+let opciones = []
+//cargo en el array opciones las opciones a mostrar en cada jugada
+opciones.push(["PEPITO", "DARK KNIGHT", "BLADE MASTER"])
+opciones.push(["DARK WIZARD", "GRAND SOUL", "GRAND MASTER"])
+opciones.push(["FIRE ELF", "FAIRY ELF", "ELF FAITER"])
+opciones.push(["MAGIC GLADIADOR", "DUEL MASTER", "DUEL GLADIADOR"])
+opciones.push(["LORD EMPEROR", "DARK LORD", "EMPEROR DARK"])
+opciones.push(["SUMMONER", "DIMENSION MASTER", "MASTER VIOLET"])
+
+//variable que guarda la posicion actual
+let posActual = 0
+//variable que guarda la cantidad acertadas hasta el momento
+let cantidadAcertadas = 0
+
+function comenzarJuego(){
+    //reseteamos las variables
+    posActual = 0
+    cantidadAcertadas = 0
+    //activamos las pantallas necesarias
+    document.getElementById("pantalla-inicial").style.display = "none"
+    document.getElementById("pantalla-juego").style.display = "block"
+    cargarPersonaje()
 }
 
-//Menu de preguntas
-function menuPj(){
-    let salirMenu = false
-    do{
-        salirMenu = preguntarPersonajes(salirMenu)
-    }while(!salirMenu)
-}
-
-function preguntarPersonajes(salir){
-    let opcionMenu = prompt(`Elegi tu personaje favorito (Presiona el numero que corresponda)
-        1 - Dark Knight
-        2 - Dark Wizard
-        3 - Fairy Elf
-        4 - Magic Gladiator
-        5 - Dark Lord
-        6 - Summoner
-        0 - Salir del menu`)
-
-    switch(opcionMenu){
-        case "1":
-            preguntas1()
-        break
-        case "2":
-            preguntas2()
-        break
-        case "3":
-            preguntas3()
-        break
-        case "4":
-            preguntas4()    
-        break
-        case "5":
-            preguntas5()    
-        break
-        case "6":
-            preguntas6()
-        break
-        case "0":
-            alert("Gracias por participar en el test de preguntas")
-            salir = true
-            return salir 
-        break
-        default:
-            alert("Ingrese una opcion, en el caso de salir precionar 0")
-        break             
+//funcion que carga la siguiente bandera y sus opciones
+function cargarPersonaje(){
+    //controlo sis se acabaron las banderas
+    if(personajes.length <= posActual){
+        terminarJuego()
     }
+    else{//cargo las opciones
+        //limpiamos las clases que se asignaron
+        limpiarOpciones();
+        document.getElementById("imgPersonaje").src = "../css/img/" + personajes[posActual]
+        document.getElementById("n0").innerHTML = opciones[posActual][0]
+        document.getElementById("n1").innerHTML = opciones[posActual][1]
+        document.getElementById("n2").innerHTML = opciones[posActual][2]
+    }
+}
+
+function limpiarOpciones(){
+    document.getElementById("n0").className = "nombre"
+    document.getElementById("n1").className = "nombre"
+    document.getElementById("n2").className = "nombre"
+    document.getElementById("l0").className = "letra"
+    document.getElementById("l1").className = "letra"
+    document.getElementById("l2").className = "letra"
+}
+
+function comprobarRespuesta(opElegida){
+    if(opElegida==correcta[posActual]){//acertó
+        //agregamos las clases para colocar el color verde a la opcion elegida
+        document.getElementById("n" + opElegida).className = "nombre nombreAcertada"
+        document.getElementById("l" + opElegida).className = "letra letraAcertada"
+        cantidadAcertadas++;
+    }else{//no acerto
+        //agramos las clases para colocar en rojo la opcion elegida
+        document.getElementById("n" + opElegida).className = "nombre nombreNoAcertada"
+        document.getElementById("l" + opElegida).className = "letra letraNoAcertada"
+
+        //opcion que era correcta
+        document.getElementById("n" + correcta[posActual]).className = "nombre nombreAcertada"
+        document.getElementById("l" + correcta[posActual]).className = "letra letraAcertada"
+    }
+    posActual++;
+    //Esperamos 1 segundo y pasamos mostrar el siguiente personaje y sus opciones
+    setTimeout(cargarPersonaje,1000)
+}
+function terminarJuego(){
+    //ocultamos las pantallas y mostramos la pantalla final
+    document.getElementById("pantalla-juego").style.display = "none"
+    document.getElementById("pantalla-final").style.display = "block"
+    //agreamos los resultados
+    document.getElementById("numCorrectas").innerHTML = cantidadAcertadas
+    document.getElementById("numIncorrectas").innerHTML = personajes.length - cantidadAcertadas
+}
+
+function volverAlInicio(){
+    //ocultamos las pantallas y activamos la inicial
+    document.getElementById("pantalla-final").style.display = "none"
+    document.getElementById("pantalla-inicial").style.display = "block"
+    document.getElementById("pantalla-juego").style.display = "none"
 }
 
 //carrito de compras
@@ -358,20 +199,7 @@ function verWebShop(array){
 }
 verWebShop(webShop)
 
-//Test de preguntas
-function cargarPreguntas(array){
-    for(let preguntas of array){
-        let nuevaPregunta = document.createElement("div")
-        nuevaPregunta.innerHTML = `
-        <div id="${preguntas.id} class="form-check row">
-            <h3>${preguntas.pregunta} </h3>
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">${preguntas.respuesta}${preguntas.distractores}</label>
-        </div>`
-        preguntasDiv.appendChild(nuevaPregunta)
-    }
-}
-cargarPreguntas(basePreguntas)
+
 /* --------------------------------- EVENTOS -------------------------------- */
 //buscador
 inputBuscador.addEventListener("input", ()=>{
@@ -390,4 +218,25 @@ menorPrecio.addEventListener("change", ()=>{
 //boton carrito
 btnCarrito.addEventListener("click", ()=>{
     agregarItemsCarrito(itemsEnCarrito)
+})
+
+//test personajes
+botonComenzar.addEventListener("click", ()=>{
+    comenzarJuego()
+})
+
+botonVolverInicio.addEventListener("click", ()=>{
+    terminarJuego()
+})
+
+opcion0.addEventListener("click", ()=>{
+    comprobarRespuesta(0)
+})
+
+opcion1.addEventListener("click", ()=>{
+    comprobarRespuesta(1)
+})
+
+opcion2.addEventListener("click", ()=>{
+    comprobarRespuesta(2)
 })

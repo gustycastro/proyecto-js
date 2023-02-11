@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas</title>
-    <!-- --------- ICONOS --------- -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Test</title>
     <!-- --------- BOOTSTRAP ---------- -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
 </head>
 <body class="img__fondo">
     <header>
@@ -28,19 +24,43 @@
         </nav>
     </header>
 
-    <main>
-        <section class="capa__main">
-            <div>
-                <h1>TEST DE PREGUNTAS</h1>
+    <section class="capa__main">
+        <h1>ADIVINA EL PERSONAJE</h1>
+        <!-- Pantalla inicial -->
+        <div id="pantalla-inicial">
+            <p>¿Como se llama el personaje?</p>
+            <button class="boton" id="btnComenzar">COMENZAR A JUGAR</button>
+        </div>
+        <!-- Pantalla juego -->
+        <div class="pantalla-juego" id="pantalla-juego">
+            <img src="../css/img/bladeMaster.jpg" alt="" id="imgPersonaje">
+            <div class="opciones">
+                <div class="opcion" id="op0">
+                    <div class="letra" id="l0">A</div>
+                    <div class="nombre" id="n0">OPCION A</div>
+                </div>
+                <div class="opcion" id="op1" >
+                    <div class="letra" id="l1">B</div>
+                    <div class="nombre" id="n1">OPCION B</div>
+                </div>
+                <div class="opcion" id="op2">
+                    <div class="letra" id="l2">C</div>
+                    <div class="nombre" id="n2">OPCION C</div>
+                </div>
             </div>
-                <div id="preg" class="form-check row row-cols-1"></div>    
-        </section>
-    </main>
+        </div>
+        <!-- Pantalla final -->
+        <div id="pantalla-final">
+            <h2>CORRECTAS: <span id="numCorrectas">3</span></h2>
+            <h2>INCORRECTAS: <span id="numIncorrectas">2</span></h2>
+            <button class="boton" id="btnVolverInicio">VOLVER AL INICIO</button>
+        </div>
+    </section>
+    
 
     <!-- --------- SCRIPT BOOTSTRAP ---------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- --------- SCRIPT PROPIOS ---------- -->
-    <script src="../js/class.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/fondoToggle.js"></script>
 
