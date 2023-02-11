@@ -21,12 +21,12 @@ let correcta = [2,2,1,1,0,0]
 //array que guardara los personajes a mostrar en cada jugada
 let opciones = []
 //cargo en el array opciones las opciones a mostrar en cada jugada
-opciones.push(["PEPITO", "DARK KNIGHT", "BLADE MASTER"])
-opciones.push(["DARK WIZARD", "GRAND SOUL", "GRAND MASTER"])
-opciones.push(["FIRE ELF", "FAIRY ELF", "ELF FAITER"])
-opciones.push(["MAGIC GLADIADOR", "DUEL MASTER", "DUEL GLADIADOR"])
-opciones.push(["LORD EMPEROR", "DARK LORD", "EMPEROR DARK"])
-opciones.push(["SUMMONER", "DIMENSION MASTER", "MASTER VIOLET"])
+opciones.push(["BLADE KNIGHT", "DARK KNIGHT", "BLADE MASTER"])
+opciones.push(["DARK WIZARD", "SOUL MASTER", "GRAND MASTER"])
+opciones.push(["MUSE ELF", "FAIRY ELF", "HIGH ELF"])
+opciones.push(["MAGIC GLADIADOR", "DUEL MASTER", "MAGIC KNIGHT"])
+opciones.push(["LORD EMPEROR", "DARK LORD", "EMPIRE LORD"])
+opciones.push(["SUMMONER", "DIMENSION MASTER", "BLOODY SUMMONER"])
 
 //variable que guarda la posicion actual
 let posActual = 0
