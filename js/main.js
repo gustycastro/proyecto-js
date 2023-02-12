@@ -4,7 +4,7 @@
 let inputBuscador = document.getElementById("buscar")
 let shopDiv = document.getElementById("shop")
 let menorPrecio = document.getElementById("menorPrecio")
-let modalbBodyCarrito = document.getElementById("modal__bodyCarrito")
+let modalBodyCarrito = document.getElementById("modalBodyCarrito")
 let btnCarrito = document.getElementById("btnCarrito")
 let precioTotal = document.getElementById("precioTotal")
 let btnScroll = document.getElementById("btnScroll")
@@ -21,22 +21,23 @@ function buscarInfo(buscado, array){
 
 //carrito de compras
 let itemsEnCarrito
-if(localStorage.getItem("carrito")){
-    itemsEnCarrito = JSON.parse(localStorage.getItem("carrito"))
-}else{
-    itemsEnCarrito = []
-    localStorage.getItem("carrito")
-}
+
+localStorage.getItem("carrito") ? itemsEnCarrito = JSON.parse(localStorage.getItem("carrito")) : (itemsEnCarrito = [], localStorage.getItem("carrito"))
+
 function agregarAlCarrito(items){
     let itemAgregado = itemsEnCarrito.find((elem)=>elem.id == items.id)
-    if(itemAgregado == undefined){
-        alert(`${items.nombre} ha sido agregado al carrito`)
-        itemsEnCarrito.push(items)
-        localStorage.setItem("carrito", JSON.stringify(itemsEnCarrito))
-    }else{
-        alert("Ya se encuentra en el carrito")
-    }
-    
+
+    itemAgregado == undefined ? (Swal.fire({
+        icon: 'success',
+        title: `${items.nombre} agregado a tus compras`,
+        showConfirmButton: false,
+        timer: 2500
+        }), itemsEnCarrito.push(items), localStorage.setItem("carrito", JSON.stringify(itemsEnCarrito))) : Swal.fire({
+            icon: 'warning',
+            title: 'Ya se encuentra en tus compras',
+            showConfirmButton: false,
+            timer: 2500
+            })
 }
 
 function compraTotal(array){
@@ -49,12 +50,12 @@ function compraTotal(array){
 
 //agregar items en carrito
 function agregarItemsCarrito(array){
-    modalbBodyCarrito.innerHTML = ""
+    modalBodyCarrito.innerHTML = ""
     array.forEach((itemsCarrito) => {
-        modalbBodyCarrito.innerHTML +=`
-        <div class="card border-primary mb-3" id ="itemsCarrito${itemsCarrito.id}" style="max-width: 300px;">
-            <img class="card-img-top" height="300px" src="./css/img/${itemsCarrito.imagen}" alt="${itemsCarrito.nombre}">
-            <div class="card-body">
+        modalBodyCarrito.innerHTML +=`
+        <div class="card border-primary mb-3" id ="itemsCarrito${itemsCarrito.id}" style="max-width: 250px;">
+            <img class="card-img-top " height="250px" src="./css/img/${itemsCarrito.imagen}" alt="${itemsCarrito.nombre}">
+            <div class="card-body ">
                     <h4 class="card-title">${itemsCarrito.nombre}</h4>
                     <p class="card-text">$${itemsCarrito.precio}</p> 
                     <button class= "btn btn-danger" id="botonEliminar${itemsCarrito.id}"><i class="fas fa-trash-alt"></i></button>
@@ -100,11 +101,7 @@ verWebShop(webShop)
 //boton scroll
 
 function scrollFunction(){
-    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
-        document.getElementById("btnScroll").style.display = "block"
-    }else{
-        document.getElementById("btnScroll").style.display = "none"
-    }
+    document.body.scrollTop > 200 || document.documentElement.scrollTop > 200 ? document.getElementById("btnScroll").style.display = "block" : document.getElementById("btnScroll").style.display = "none"
 }
 
 function scrollUp(){
@@ -120,11 +117,7 @@ inputBuscador.addEventListener("input", ()=>{
 
 //ordenar precio
 menorPrecio.addEventListener("change", ()=>{
-    if(menorPrecio.value == "1"){
-        ordenarMenorMayor(webShop)
-    }else{
-        verWebShop(webShop)
-    }
+    menorPrecio.value == "1" ? ordenarMenorMayor(webShop) : verWebShop(webShop)
 })
 
 //boton carrito
@@ -139,3 +132,4 @@ btnScroll.addEventListener("click", ()=>{
 document.addEventListener("scroll", ()=>{
     scrollFunction()
 })
+

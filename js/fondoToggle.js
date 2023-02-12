@@ -1,12 +1,9 @@
 let btnToggle = document.getElementById("fondoToggle")
 
 let fondo = JSON.parse(localStorage.getItem("fondoNuevo")) || false;
-if(fondo){
-    document.body.classList.add("fondo__toggle")
-}
-if(!fondo){
-    document.body.classList.remove("fondo__toggle")
-}
+
+fondo && document.body.classList.add("fondo__toggle")
+!fondo && document.body.classList.remove("fondo__toggle")
 
 btnToggle.addEventListener("click", ()=>{
     if(fondo === false){
