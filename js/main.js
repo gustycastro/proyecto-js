@@ -98,9 +98,9 @@ function verWebShop(array){
 verWebShop(webShop)
 
 //boton scroll
-document.addEventListener("scroll", scrollFunction)
+
 function scrollFunction(){
-    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
         document.getElementById("btnScroll").style.display = "block"
     }else{
         document.getElementById("btnScroll").style.display = "none"
@@ -135,4 +135,7 @@ btnCarrito.addEventListener("click", ()=>{
 //boton scroll
 btnScroll.addEventListener("click", ()=>{
     scrollUp()
+})
+document.addEventListener("scroll", ()=>{
+    scrollFunction()
 })
