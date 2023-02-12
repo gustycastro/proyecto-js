@@ -98,6 +98,7 @@ function verWebShop(array){
 verWebShop(webShop)
 
 //boton scroll
+document.addEventListener("scroll", scrollFunction)
 function scrollFunction(){
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
         document.getElementById("btnScroll").style.display = "block"
@@ -105,9 +106,7 @@ function scrollFunction(){
         document.getElementById("btnScroll").style.display = "none"
     }
 }
-window.onscroll = function(){
-    scrollFunction()
-}
+
 function scrollUp(){
     document.body.scrollTop = 0
     document.documentElement.scrollTop = 0
