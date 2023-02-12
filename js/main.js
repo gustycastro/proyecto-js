@@ -7,6 +7,7 @@ let menorPrecio = document.getElementById("menorPrecio")
 let modalbBodyCarrito = document.getElementById("modal__bodyCarrito")
 let btnCarrito = document.getElementById("btnCarrito")
 let precioTotal = document.getElementById("precioTotal")
+let btnScroll = document.getElementById("btnScroll")
 
 /* ---------------------------- FUNCIONES --------------------------- */
 
@@ -96,6 +97,22 @@ function verWebShop(array){
 }
 verWebShop(webShop)
 
+//boton scroll
+function scrollFunction(){
+    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+        document.getElementById("btnScroll").style.display = "block"
+    }else{
+        document.getElementById("btnScroll").style.display = "none"
+    }
+}
+window.onscroll = function(){
+    scrollFunction()
+}
+function scrollUp(){
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+}
+
 /* --------------------------------- EVENTOS -------------------------------- */
 //buscador
 inputBuscador.addEventListener("input", ()=>{
@@ -114,4 +131,9 @@ menorPrecio.addEventListener("change", ()=>{
 //boton carrito
 btnCarrito.addEventListener("click", ()=>{
     agregarItemsCarrito(itemsEnCarrito)
+})
+
+//boton scroll
+btnScroll.addEventListener("click", ()=>{
+    scrollUp()
 })
