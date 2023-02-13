@@ -8,6 +8,13 @@ let modalBodyCarrito = document.getElementById("modalBodyCarrito")
 let btnCarrito = document.getElementById("btnCarrito")
 let precioTotal = document.getElementById("precioTotal")
 let btnScroll = document.getElementById("btnScroll")
+let fecha = document.getElementById("fecha")
+
+/* ------------- FECHA ---------------- */
+const DateTime = luxon.DateTime
+const fechaHoy = DateTime.now()
+let fechaActual = fechaHoy.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
+fecha.innerHTML = `${fechaActual}`
 
 /* ---------------------------- FUNCIONES --------------------------- */
 
@@ -41,11 +48,11 @@ function agregarAlCarrito(items){
 }
 
 function compraTotal(array){
-    let sumaTotal = 0
-    for(let items of array){
-        sumaTotal = sumaTotal + items.precio
-    }
-    precioTotal.innerHTML= `El precio total es: ${sumaTotal} cash`
+    let sumaTotal = array.reduce((acc, itemsCarrito)=> acc + itemsCarrito.precio, 0)
+    sumaTotal == 0 ? 
+    precioTotal.innerHTML=`No hay items agregados` :
+    precioTotal.innerHTML= `Precio total: ${sumaTotal} cash`
+    return sumaTotal
 }
 
 //agregar items en carrito
@@ -61,7 +68,17 @@ function agregarItemsCarrito(array){
                     <button class= "btn btn-danger" id="botonEliminar${itemsCarrito.id}"><i class="fas fa-trash-alt"></i></button>
             </div>    
         </div>`
-        
+    })
+    array.forEach((itemsCarrito)=>{
+        document.getElementById(`botonEliminar${itemsCarrito.id}`).addEventListener("click", ()=>{
+            let cardItems = document.getElementById(`itemsCarrito${itemsCarrito.id}`)
+            cardItems.remove()
+            let itemsEliminar = array.find(item => item.id == itemsCarrito.id)
+            let posicion = array.indexOf(itemsEliminar)
+            array.splice(posicion, 1)
+            localStorage.setItem("carrito", JSON.stringify(array))
+            compraTotal(array)
+        })
     })
     compraTotal(array)
 }

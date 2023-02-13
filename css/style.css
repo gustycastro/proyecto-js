@@ -32,6 +32,7 @@
 }
 
 /* ---------------------------------- MAIN ---------------------------------- */
+
 .img__fondo{
     background-image: url(img/fondoIndex.png);
     background-repeat: no-repeat;   
@@ -159,6 +160,16 @@
 #btnScroll:hover{
     transform: scale(1.1);
     border-color: rgba(0, 0, 0, 0.2);
+}
+
+#fecha{
+    color: whitesmoke;
+    background-color: #001278;
+    text-align: center;
+    width: 150px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 4px;
 }
 /* -------------------------------- TEST PERSONAJES ------------------------------- */
 /* PANTALLA INICIO */
