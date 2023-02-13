@@ -48,7 +48,7 @@
 
 }
 .capa__main{
-    box-shadow: 0px 0px 20px 10px whitesmoke;
+    box-shadow: 0px 0px 10px 4px whitesmoke;
     background-color: #212529;
     opacity: 90%;
     margin: 100px 200px;
@@ -58,7 +58,6 @@
     font-weight: bold;
     font-variant: small-caps;
     font-size: 45px;
-    overflow-y: hidden;
     text-align: center;
 }
 .capa__main h2{
@@ -66,7 +65,6 @@
     font-weight: bold;
     font-variant: small-caps;
     font-size: 40px;
-    overflow-y: hidden;
     text-align: center;
 }
 .portada{
@@ -177,30 +175,35 @@
     display: block;
     text-align: center;
     font-size: 30px;
-}
-#pantallaInicial{
-    margin: 60px 0;
-    color: black;
+    color: whitesmoke;
 }
 .boton{
     border: none;
     background: #000878;
     color: #fff;
     padding: 10px 20px;
-    border-radius: 50px;
+    margin-bottom: 15px;
+    border-radius: 20px;
     cursor: pointer;
+}
+.logo__test{
+    display: flex;
+    justify-content: center;
 }
 /* PANTALLA juego */
 #pantallaJuego{
     display: none;
 }
 .pantalla__juego{
-    margin: 50px auto;
+    margin: 20px auto;
     text-align: center;
+    padding-bottom: 10px;
 }
 .pantalla__juego img{
     max-width: 200px;
     width: 100%;
+    border-radius: 15px;
+    border: 2px solid whitesmoke;
 }
 .opciones{
     max-width: 400px;
@@ -261,17 +264,26 @@
     display: none;
     text-align: center;
 }
+#pantallaFinal h2{
+    color: whitesmoke;
+    padding: 10px;
+    font-size: 25px;
+}
 #pantallaFinal #numCorrectas{
     background-color: chartreuse;
     display: inline-block;
     width: 50px;
-    height: 50px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid whitesmoke;
 }
 #pantallaFinal #numIncorrectas{
     background-color: darkred;
     display: inline-block;
     width: 50px;
-    height: 50px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid whitesmoke;
 }
 /* --------------------------------- FOOTER --------------------------------- */
 .footer__p{
