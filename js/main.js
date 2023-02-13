@@ -47,6 +47,7 @@ function agregarAlCarrito(items){
             })
 }
 
+//suma de precios al ir comprando
 function compraTotal(array){
     let sumaTotal = array.reduce((acc, itemsCarrito)=> acc + itemsCarrito.precio, 0)
     sumaTotal == 0 ? 
@@ -116,11 +117,9 @@ function verWebShop(array){
 verWebShop(webShop)
 
 //boton scroll
-
 function scrollFunction(){
     document.body.scrollTop > 200 || document.documentElement.scrollTop > 200 ? document.getElementById("btnScroll").style.display = "block" : document.getElementById("btnScroll").style.display = "none"
 }
-
 function scrollUp(){
     document.body.scrollTop = 0
     document.documentElement.scrollTop = 0
