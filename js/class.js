@@ -41,8 +41,8 @@ const fenrir=new Items(30, " ", "Fenrir Gold", 450, "fenrirGold.jpg")
 
 let webShop = []
 if(localStorage.getItem("webShop")){
-    for(items of JSON.parse(localStorage.getItem("webShop"))){
-        let classItem = new Items(items.id, items.personaje, items.nombre, items.precio, items.imagen)
+    for(e of JSON.parse(localStorage.getItem("webShop"))){
+        let classItem = new Items(e.id, e.personaje, e.nombre, e.precio, e.imagen)
         webShop.push(classItem)
     }
 }else{

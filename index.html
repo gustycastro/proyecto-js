@@ -28,6 +28,7 @@
 
     <main>
         <div id="fecha"></div>
+        <div id="reloj"></div>
         <div class="portada">
             <img src="./css/img/portada.png" alt="">
         </div>
@@ -79,16 +80,14 @@
         </section>
 
         <!-- Modal Carrito -->
-        <div class="modal fade" id="modalCarrito" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Tus compras</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Tus compras</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div id="modalBodyCarrito" class="modal-body">
-
-                    </div>
+                    <div id="modalBodyCarrito" class="modal-body"></div>
                     <div>
                         <div class="row ml-ato">
                             <p id="precioTotal"></p>
@@ -96,13 +95,14 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Finalizar compra</button>
+                        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" id="btnFinalizarCompra">Finalizar compra</button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- Boton scroll -->
     <div>
         <button class="btn btn-primary" id="btnScroll"><i class="fa-sharp fa-solid fa-chevron-up"></i></button>
     </div>

@@ -169,6 +169,15 @@
     padding: 5px;
     border-radius: 4px;
 }
+
+#reloj{
+    color: whitesmoke;
+    background-color: #001278;
+    text-align: center;
+    width: 150px;
+    margin: 10px;
+    border-radius: 4px;
+}
 /* -------------------------------- TEST PERSONAJES ------------------------------- */
 /* PANTALLA INICIO */
 #pantallaInicial{
