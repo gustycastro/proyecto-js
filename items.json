@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "personaje": "Dark Knight",
+        "nombre": "Wing of Strom",
+        "precio": 500,
+        "imagen": "wingOfStrom.jpg"
+    },
+    {
+        "id": 2,
+        "personaje": "Dark Wizard",
+        "nombre": "Wing of Eternal",
+        "precio": 500,
+        "imagen": "wingOfEternal.jpg"
+    },
+    {
+        "id": 3,
+        "personaje": "Fairy Elf",
+        "nombre": "Wing of Ilusion",
+        "precio": 500,
+        "imagen": "wingOfIlusion.jpg"
+    },
+    {
+        "id": 4,
+        "personaje": "Magic Gladiator",
+        "nombre": "Wing of Destruction",
+        "precio": 500,
+        "imagen": "wingOfDestruction.jpg"
+    },
+    {
+        "id": 5,
+        "personaje": "Dark Lord",
+        "nombre": "Cloak of Emperor",
+        "precio": 500,
+        "imagen": "cloakOfEmperor.jpg"
+    },
+    {
+        "id": 6,
+        "personaje": "Summoner",
+        "nombre": "Wing of Dimension",
+        "precio": 500,
+        "imagen": "wingOfDimension.jpg"
+    },
+    {
+        "id": 7,
+        "personaje": "Dark Knight",
+        "nombre": "Set Brave",
+        "precio": 1000,
+        "imagen": "setBrave.jpg"
+    },
+    {
+        "id": 8,
+        "personaje": "Dark Wizard",
+        "nombre": "Set Hades",
+        "precio": 1000,
+        "imagen": "setHades.jpg"
+    },
+    {
+        "id": 9,
+        "personaje": "Fairy Elf",
+        "nombre": "Set Divine",
+        "precio": 1000,
+        "imagen": "setDivine.jpg"
+    },
+    {
+        "id": 10,
+        "personaje": "Magic Gladiator",
+        "nombre": "Set Phantom",
+        "precio": 1000,
+        "imagen": "setPhatom.jpg"
+    },
+    {
+        "id": 11,
+        "personaje": "Dark Lord",
+        "nombre": "Set Royal",
+        "precio": 1000,
+        "imagen": "setRoyal.jpg"
+    },
+    {
+        "id": 12,
+        "personaje": "Summoner",
+        "nombre": "Set Queen",
+        "precio": 1000,
+        "imagen": "setQueen.jpg"
+    },
+    {
+        "id": 13,
+        "personaje": "Dark Knight",
+        "nombre": "Sword Breaker",
+        "precio": 300,
+        "imagen": "swordBreaker.jpg"
+    },
+    {
+        "id": 14,
+        "personaje": "Dark Wizard",
+        "nombre": "Staff Imberial",
+        "precio": 300,
+        "imagen": "imberialStaff.jpg"
+    },
+    {
+        "id": 15,
+        "personaje": "Fairy Elf",
+        "nombre": "Dark Stinger",
+        "precio": 300,
+        "imagen": "darkStringer.jpg"
+    },
+    {
+        "id": 16,
+        "personaje": "Magic Gladiator",
+        "nombre": "Rune Bastard Sword",
+        "precio": 300,
+        "imagen": "runeBastardSword.jpg"
+    },
+    {
+        "id": 17,
+        "personaje": "Dark Lord",
+        "nombre": "Absolute Scepter",
+        "precio": 300,
+        "imagen": "scepter.jpg"
+    },
+    {
+        "id": 18,
+        "personaje": "Summoner",
+        "nombre": "Demonic Stick",
+        "precio": 300,
+        "imagen": "stick.jpg"
+    },
+    {
+        "id": 19,
+        "personaje": "Dark Knight",
+        "nombre": "Crimson Glory",
+        "precio": 350,
+        "imagen": "crymsonGlory.jpg"
+    },
+    {
+        "id": 20,
+        "personaje": "Dark Wizard",
+        "nombre": "Guardian Shield",
+        "precio": 350,
+        "imagen": "guardianShield.jpg"
+    },
+    {
+        "id": 21,
+        "personaje": "Magic Gladiator",
+        "nombre": "Salamander Shield",
+        "precio": 350,
+        "imagen": "salamanderShield.jpg"
+    },
+    {
+        "id": 22,
+        "personaje": "Dark Lord",
+        "nombre": "Cross Shield",
+        "precio": 350,
+        "imagen": "crossShield.jpg"
+    },
+    {
+        "id": 23,
+        "personaje": "Summoner",
+        "nombre": "Book of Lagle",
+        "precio": 350,
+        "imagen": "book.jpg"
+    },
+    {
+        "id": 24,
+        "personaje": "",
+        "nombre": "Ring of Wind",
+        "precio": 50,
+        "imagen": "ringOfWind.jpg"
+    },
+    {
+        "id": 25,
+        "personaje": "",
+        "nombre": "Ring of Fire",
+        "precio": 50,
+        "imagen": "ringOfFire.jpg"
+    },
+    {
+        "id": 26,
+        "personaje": "",
+        "nombre": "Ring of Ice",
+        "precio": 50,
+        "imagen": "ringOfIce.jpg"
+    },
+    {
+        "id": 27,
+        "personaje": "",
+        "nombre": "Pendant of Wind",
+        "precio": 50,
+        "imagen": "pendantOfWind.jpg"
+    },
+    {
+        "id": 28,
+        "personaje": "",
+        "nombre": "Pendant of Fire",
+        "precio": 50,
+        "imagen": "pendantOfFire.jpg"
+    },
+    {
+        "id": 29,
+        "personaje": "",
+        "nombre": "Pendant of Ice",
+        "precio": 50,
+        "imagen": "pendantOfIce.jpg"
+    },
+    {
+        "id": 30,
+        "personaje": "",
+        "nombre": "Fenrir Gold",
+        "precio": 450,
+        "imagen": "fenrirGold.jpg"
+    }   
+]
