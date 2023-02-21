@@ -4,7 +4,16 @@ class Items{
         this.personaje = personaje,
         this.nombre = nombre,
         this.precio = precio,
-        this.imagen = imagen
+        this.imagen = imagen,
+        this.cantidad = 1
+    }
+    //metodos
+    sumarUnidad(){
+        this.cantidad +=1
+    }
+    restarUnidad(){
+        this.cantidad = this.cantidad - 1
+        return this.cantidad
     }
 }
 

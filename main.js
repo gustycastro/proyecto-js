@@ -25,9 +25,18 @@ setInterval(()=>{
 }, 1000)
 
 //array carrito
-let itemsEnCarrito
-
-localStorage.getItem("carrito") ? itemsEnCarrito = JSON.parse(localStorage.getItem("carrito")) : (itemsEnCarrito = [], localStorage.getItem("carrito"))
+let itemsEnCarrito = []
+if(localStorage.getItem("carrito")){
+    for(let e of JSON.parse(localStorage.getItem("carrito"))){
+        let cantidadSto = e.cantidad
+        let itemStorage = new Items(e.id, e.personaje, e.nombre, e.precio, e.imagen)
+        itemStorage.cantidad = cantidadSto
+        itemsEnCarrito.push(itemStorage)
+    }    
+}else{
+    itemsEnCarrito = []
+    localStorage.setItem("carrito", itemsEnCarrito)
+}
 
 /* ---------------------------- FUNCIONES --------------------------- */
 
@@ -66,12 +75,17 @@ function agregarItemsCarrito(array){
             <img class="card-img-top " height="250px" src="./css/img/${itemsCarrito.imagen}" alt="${itemsCarrito.nombre}">
             <div class="card-body ">
                     <h4 class="card-title">${itemsCarrito.nombre}</h4>
-                    <p class="card-text">$${itemsCarrito.precio}</p> 
+                    <p class="card-text">Precio: $${itemsCarrito.precio}</p> 
+                    <p class="card-text">Unidades: ${itemsCarrito.cantidad}</p>
+                    <p class="card-text">Total: $${itemsCarrito.precio * itemsCarrito.cantidad}</p>
+                    <button class= "btn btn-success" id="btnSumarUnidad${itemsCarrito.id}"><i class=""></i>+</button>
+                    <button class= "btn btn-danger" id="btnEliminarUnidad${itemsCarrito.id}"><i class=""></i>-</button> 
                     <button class= "btn btn-danger" id="botonEliminar${itemsCarrito.id}"><i class="fas fa-trash-alt"></i></button>
             </div>    
         </div>`
     })
     array.forEach((itemsCarrito)=>{
+        //btn eliminar
         document.getElementById(`botonEliminar${itemsCarrito.id}`).addEventListener("click", ()=>{
             let cardItems = document.getElementById(`itemsCarrito${itemsCarrito.id}`)
             cardItems.remove()
@@ -81,13 +95,34 @@ function agregarItemsCarrito(array){
             localStorage.setItem("carrito", JSON.stringify(array))
             compraTotal(array)
         })
+        //btn sumar unidad
+        document.getElementById(`btnSumarUnidad${itemsCarrito.id}`).addEventListener("click", ()=>{
+            itemsCarrito.sumarUnidad()
+            localStorage.setItem("carrito", JSON.stringify(array))
+            agregarItemsCarrito(array)
+        })
+        //btn restar unidad
+        document.getElementById(`btnEliminarUnidad${itemsCarrito.id}`).addEventListener("click", ()=>{
+            let cantidad = itemsCarrito.restarUnidad()
+            if(cantidad < 1){
+                let cardItems = document.getElementById(`itemsCarrito${itemsCarrito.id}`)
+                cardItems.remove()
+                let posicion = array.indexOf(itemsCarrito)
+                array.splice(posicion, 1)
+                localStorage.setItem("carrito", JSON.stringify(array))
+                compraTotal(array)
+            }else{
+                localStorage.setItem("carrito", JSON.stringify(array))
+            }
+            agregarItemsCarrito(array)
+        })
     })
     compraTotal(array)
 }
 
 //suma de precios al ir comprando
 function compraTotal(array){
-    let sumaTotal = array.reduce((acc, itemsCarrito)=> acc + itemsCarrito.precio, 0)
+    let sumaTotal = array.reduce((acc, itemsCarrito)=> acc + (itemsCarrito.precio * itemsCarrito.cantidad), 0)
     sumaTotal == 0 ? 
     precioTotal.innerHTML=`No hay items agregados.` :
     precioTotal.innerHTML= `Precio total: ${sumaTotal} cash`
@@ -98,7 +133,7 @@ function compraTotal(array){
 function finalizarCompras(array){
     Swal.fire({
         title: '¿Está seguro de realizar la compra?',
-        text: `Recordar de vaciar tu /baul0 para adquirir tus items.`,
+        text: `Recuerda de vaciar tu /baul0 para adquirir tus items.`,
         icon: 'info',
         showCancelButton: true,
         confirmButtonText: 'Comprar',
