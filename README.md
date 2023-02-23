@@ -2,9 +2,11 @@
 
 *Introducción*
 
-Página de Mu Online formada por una WebShop principal, lo cual dispone de un input y su funcionamieto es buscar items variados por secciones, en este caso se puede hacer por personajes o por nombre del item y también a su vez podes ordenar los items por sus precios de menor a mayor. Por otra parte, en dicha página se encuentra un boton de ¡Comenzar! que al precionarlo te redirige a una página llamada Test. Esta misma dispone de una Trivia de personajes lo cual su funcionamiento es adivinar que tipo de personaje es y al terminarlo te indica tus opciones correctas e incorrectas. También podes volver al inicio y hacer el test cuantas veces quieras.
+Página de Mu Online formada por una WebShop principal, lo cual dispone de un input y su funcionamieto es buscar items variados por secciones, en este caso se puede hacer por personajes o por nombre del item y también podes ordenar los items por sus precios de menor a mayor. A su vez, al precionar el boton comprar que disponen cada items se puede simular una compra agregando estos mismos en el "carrito" y asi poder finalizar o no la simulación.  
 
-Cabe aclarar que en el header se puede visualizar la fecha del dia y horario. Tambien dispone de un boton lo cual su funcionamiento es cambiar el fondo del body.
+Por otra parte, en dicha página se encuentra un boton de ¡Comenzar! que al precionarlo te redirige a una página llamada Test. Esta misma dispone de una Trivia de personajes de dicho juego lo cual su funcionamiento es adivinar mediante un multiple choice que tipo de personaje corresponde y al terminarlo te indica tus opciones correctas e incorrectas. También podes volver al inicio y hacer el test cuantas veces quieras.
+
+Cabe aclarar que en el header de la pagina Test se puede visualizar la fecha del dia y horario. Tambien dispone de un boton lo cual su funcionamiento es cambiar el fondo del body.
 
 A continuación algunas imágenes del proyecto:
 
