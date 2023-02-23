@@ -8,11 +8,12 @@ Cabe aclarar que en el header se puede visualizar la fecha del dia y horario. Ta
 
 A continuación algunas imágenes del proyecto:
 
-![1](https://user-images.githubusercontent.com/113953324/220434930-f7f13f88-e87e-4739-be9d-1e26d260b6db.png)
-![2](https://user-images.githubusercontent.com/113953324/220434968-1f406065-ddee-49c4-92c3-2781d61910eb.png)
-![3](https://user-images.githubusercontent.com/113953324/220435001-b0c9ec2b-0ab9-43a8-b6cb-2bb170dbdb9a.png)
-![4](https://user-images.githubusercontent.com/113953324/220435028-a811b672-07f3-4b17-8b13-cb7d3d7bbaa3.png)
-![5](https://user-images.githubusercontent.com/113953324/220435054-96efc095-9c05-4e26-8c6a-23b48d3011c6.png)
+![1](https://user-images.githubusercontent.com/113953324/220806609-7b50e2db-3c1b-47bd-a660-f4c5903dbdad.png)
+![2](https://user-images.githubusercontent.com/113953324/220806406-5ca22da7-a846-43b4-bde1-7bacd0713128.png)
+![3](https://user-images.githubusercontent.com/113953324/220806421-b6790c53-049c-402e-b0d4-6975b952cf83.png)
+![4](https://user-images.githubusercontent.com/113953324/220806782-8747cc58-f9c6-4986-9759-24cb4b63ee67.png)
+![5](https://user-images.githubusercontent.com/113953324/220806454-e819c277-b40d-4acb-a25a-e04455d2fe39.png)
+![6](https://user-images.githubusercontent.com/113953324/220806465-e3c80376-e7d9-4029-bd97-d180fac8bf6c.png)
 
 *Tecnologías utilizadas*
 
