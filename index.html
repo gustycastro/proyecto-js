@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <!-- --------- BOOTSTRAP ---------- -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- --------- ANIMATE ---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- --------- CSS PROPIO ---------- -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -19,12 +21,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html">Mu online</a>
-                <div class="alinear">
-                    <div id="fecha"></div>
-                    <div id="reloj"></div>
-                </div>
                 <div>
-                    <button id="fondoToggle" class="btn btn-secondary btn-sm ">Cambiar Fondo</button>
+                    <button id="fondoToggle" class="btn btn-secondary btn-sm ">Cambiar fondo</button>
                 </div>
             </div> 
         </nav>
@@ -35,10 +33,10 @@
             <img src="./css/img/portada.png" alt="">
         </div>
         <section class="capa__main">
-            <h1>Bienvenidos a mu online season 4</h1>
+            <h1 class="animate__animated animate__slideInLeft">Bienvenidos a mu online season 4</h1>
             <div class="conteiner">
                 <div class="row row-cols-3">
-                    <div class="lista__pj">
+                    <div class="lista__pj animate__animated animate__fadeInLeft">
                         <ul>
                             <p>Te recordamos nuestros personajes:</p>
                             <li><span class="spam__dk">Dark Knight</span></li>
@@ -49,13 +47,19 @@
                             <li><span class="spam__sum">Summoner</span></li>
                         </ul>
                     </div>
-                    <div class="test__pj">
+                    <div class="test__pj animate__animated animate__fadeInLeft animate__delay-1s">
                         <p>¿Cuanto sabes de Mu Online Season 4?</p>
                         <a href="./paginas/test.html" target="_blank" type="button" class="btn btn-primary">¡Comenzar!</button></a>
                     </div>
-                    <div class="carro__items">
-                        <p>Tus compras</p>
-                        <button id="btnCarrito" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCarrito"><i class="fa-solid fa-cart-shopping"></i></button></i>
+                    <div class="carro__items animate__animated animate__fadeInLeft animate__delay-2s">
+                        <p class="donacion">Tus compras</p>
+                        <button id="btnCarrito" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCarrito"><i class="fa-solid fa-cart-shopping"></i></button></i><span class="cash__cantidad">Cash disponible:</span>
+                        <p class="donacion">Donaciones</p>
+                        <a href="https://www.mercadopago.com.ar" target="_blank"><img class="img__mp" src="./css/img/mp.png" alt=""></a>
+                        <p><span class="cash">3000 cash</span> x $1000</p>
+                    </div>
+                    <div>
+                        
                     </div>
                 </div>
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -72,7 +76,7 @@
                 </div>
                 <ul class="navbar-nav me-auto">
                     <form class="d-flex justify-content-center">
-                        <input id="buscar" class="form-control me-2" placeholder="Buscar por personajes/item" aria-label="Search">
+                        <input id="buscar" class="form-control" placeholder="Buscar por personajes/item" aria-label="Search">
                     </form> 
                 </ul>
             </div>
@@ -115,8 +119,6 @@
     
     <!-- --------- SWEET ALERT ---------- -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- --------- LUXON ---------- -->
-    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
     <!-- --------- SCRIPT BOOTSTRAP ---------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- --------- SCRIPT PROPIOS ---------- -->

@@ -9,12 +9,12 @@ btnToggle.addEventListener("click", ()=>{
     if(fondo === false){
         document.body.classList.add("fondo__toggle")
         fondo = true;
-        btnToggle.innerText = `Fondo Original`
+        btnToggle.innerText = `Fondo original`
         localStorage.setItem('fondoNuevo', JSON.stringify(fondo));
     }else if(fondo === true) {
         document.body.classList.remove("fondo__toggle");
         fondo = false;
-        btnToggle.innerText = `Cambiar Fondo`
+        btnToggle.innerText = `Cambiar fondo`
         localStorage.setItem('fondoNuevo', JSON.stringify(fondo));
         
     }    

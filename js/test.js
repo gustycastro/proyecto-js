@@ -5,6 +5,20 @@ let opcion0 = document.getElementById("op0")
 let opcion1 = document.getElementById("op1")
 let opcion2 = document.getElementById("op2")
 let botonVolverInicio = document.getElementById("btnVolverInicio")
+let fecha = document.getElementById("fecha")
+let reloj = document.getElementById("reloj")
+
+/* ------------- FECHA ---------------- */
+const DateTime = luxon.DateTime
+const fechaHoy = DateTime.now()
+let fechaActual = fechaHoy.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
+fecha.innerHTML = `${fechaActual}`
+
+/* ------------- RELOJ ---------------- */
+setInterval(()=>{
+    let hora = DateTime.now().toLocaleString(DateTime.TIME_24_WITH_SECONDS)
+    reloj.innerHTML = `${hora}`
+}, 1000)
 
 //Test de personajes
 //cargo en un array las imganes de los personajes.

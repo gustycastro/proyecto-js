@@ -8,21 +8,7 @@ let modalBodyCarrito = document.getElementById("modalBodyCarrito")
 let btnCarrito = document.getElementById("btnCarrito")
 let precioTotal = document.getElementById("precioTotal")
 let btnScroll = document.getElementById("btnScroll")
-let fecha = document.getElementById("fecha")
-let reloj = document.getElementById("reloj")
 let btnFinalizarCompra = document.getElementById("btnFinalizarCompra")
-
-/* ------------- FECHA ---------------- */
-const DateTime = luxon.DateTime
-const fechaHoy = DateTime.now()
-let fechaActual = fechaHoy.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)
-fecha.innerHTML = `${fechaActual}`
-
-/* ------------- RELOJ ---------------- */
-setInterval(()=>{
-    let hora = DateTime.now().toLocaleString(DateTime.TIME_24_WITH_SECONDS)
-    reloj.innerHTML = `${hora}`
-}, 1000)
 
 //array carrito
 let itemsEnCarrito = []
@@ -131,34 +117,42 @@ function compraTotal(array){
 
 //boton de finzalir compras
 function finalizarCompras(array){
-    Swal.fire({
-        title: '¿Está seguro de realizar la compra?',
-        text: `Recuerda de vaciar tu /baul0 para adquirir tus items.`,
-        icon: 'info',
-        showCancelButton: true,
-        confirmButtonText: 'Comprar',
-        cancelButtonText: 'Cancelar',
-        confirmButtonColor: 'blue',
-        cancelButtonColor: 'red',
-    }).then( (result)=>{
-        if(result.isConfirmed){
-            let total = compraTotal(array)
-            Swal.fire({
-                title: 'Compra realizada.',
-                icon: 'success',
-                confirmButtonColor: 'green',
-                text: `Muchas gracias por su compra, tendras tus items en tu cuenta. Por un total de ${total} cash.`,
+    if(itemsEnCarrito.length == 0){
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Debes realizar una compra',
+            confirmButtonColor: 'blue'
+        })
+    }else{
+        Swal.fire({
+            title: '¿Está seguro de realizar la compra?',
+            text: `Recuerda de vaciar tu /baul0 para adquirir tus items.`,
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonText: 'Comprar',
+            cancelButtonText: 'Cancelar',
+            confirmButtonColor: 'blue',
+            cancelButtonColor: 'red',
+        }).then( (result)=>{
+            if(result.isConfirmed){
+                let total = compraTotal(array)
+                Swal.fire({
+                    title: 'Compra realizada.',
+                    icon: 'success',
+                    confirmButtonColor: 'green',
+                    })
+                itemsEnCarrito = []
+                localStorage.removeItem("carrito")
+            }else{
+                Swal.fire({
+                    title: 'Compra no realizada',
+                    icon: 'info',
+                    confirmButtonColor: 'green',
                 })
-            itemsEnCarrito = []
-            localStorage.removeItem("carrito")
-        }else{
-            Swal.fire({
-                title: 'Compra no realizada',
-                icon: 'info',
-                confirmButtonColor: 'green',
-            })
-        }
-    })
+            }
+        })
+    }   
 }
 
 //ordenar precio (de menor a mayor)
@@ -184,6 +178,7 @@ function verWebShop(array){
             </div>
         </div>
         `
+        
         shopDiv.appendChild(nuevoItemShop)
         let agregarBtn = document.getElementById(`agregarBtn${items.id}`)
         agregarBtn.onclick = ()=>{

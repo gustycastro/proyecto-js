@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="../css/img/favicon.ico" type="image/x-icon">
     <!-- --------- BOOTSTRAP ---------- -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- --------- ANIMATE ---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- --------- CSS PROPIO ---------- -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -16,16 +18,20 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html">Mu online</a>
+                <div class="alinear">
+                    <div id="fecha"></div>
+                    <div id="reloj"></div>
+                </div>
                 <div>
-                    <button id="fondoToggle" class="btn btn-secondary btn-sm ">Cambiar Fondo</button>
+                    <button id="fondoToggle" class="btn btn-secondary btn-sm ">Cambiar fondo</button>
                 </div>
             </div> 
         </nav>
     </header>
 
     <section class="capa__main">
-        <h1>Adivina el personaje</h1>
-        <div class="logo__test">
+        <h1 class="animate__animated animate__zoomIn">Adivina el personaje</h1>
+        <div class="logo__test animate__animated animate__zoomIn animate__delay-1s">
             <img src="../css/img/mulogo.png" alt="logo de presentacion">
         </div>
         <!-- Pantalla inicial -->
@@ -62,6 +68,8 @@
 
     <!-- --------- SCRIPT BOOTSTRAP ---------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- --------- LUXON ---------- -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
     <!-- --------- SCRIPT PROPIOS ---------- -->
     <script src="../js/test.js"></script>
     <script src="../js/fondoToggle.js"></script>

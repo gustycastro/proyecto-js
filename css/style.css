@@ -1,11 +1,12 @@
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Arsenal', sans-serif;
     
 }
 
 /* --------------------------------- HEADER --------------------------------- */
-
 .form-control{
     width: 220px;
 }
@@ -30,13 +31,29 @@
         background-position: 100% 50%;
     }
 }
-
 .alinear{
     display: flex;
 }
+#fecha{
+    color: whitesmoke;
+    background-color: #001278;
+    text-align: center;
+    width: 150px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 4px;
+}
+#reloj{
+    color: whitesmoke;
+    background-color: #001278;
+    text-align: center;
+    width: 150px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 4px;
+}
 
 /* ---------------------------------- MAIN ---------------------------------- */
-
 .img__fondo{
     background-image: url(img/fondoIndex.png);
     background-repeat: no-repeat;   
@@ -52,10 +69,10 @@
 
 }
 .capa__main{
-    box-shadow: 0px 0px 10px 4px whitesmoke;
     background-color: #212529;
-    opacity: 90%;
-    margin: 100px 200px;
+    opacity: 95%;
+    margin: 180px 200px;
+    border-radius: 15px;
 }
 .capa__main h1{
     color: black;
@@ -77,19 +94,22 @@
     flex-wrap: wrap;
 }
 .portada img{
+    margin-top: 50px;
     position: absolute;
     z-index: 999;
-    width: 400px;
-    height: 400px;
+    width: 390px;
+    height: 390px;
 }
 .lista__pj{
     background-color: #797979;
     border: 1px solid black;
     margin-top: 80px;
-
+    border-radius: 10px;
 }
 .lista__pj ul{
-    font-weight: bolder;
+    font-weight: bold;
+    font-size: 17px;
+    font-variant: small-caps;
 }
 .spam__dk{
     color: red;
@@ -110,42 +130,85 @@
     color: blueviolet;
 }
 .test__pj{
+    font-variant: small-caps;
     background-color: #797979;
     border: 1px solid black;
     margin-top: 80px;
+    border-radius: 10px;
 }
 .test__pj p{
-    font-weight: bolder;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 17px;
 }
 .carro__items{
     background-color: #797979;
     border: 1px solid black;
     margin-top: 80px;
+    border-radius: 10px;
 }
 .carro__items p{
-    font-weight: bolder;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 17px;
 }
-
+.donacion{
+    text-align: center;
+    background-color: #001278;
+    color: whitesmoke;
+    margin-top: 10px;
+}
+.img__mp{
+    height: 50px;
+    border-radius: 3px;
+}
+.cash{
+    color: yellow;
+}
+.cash__cantidad{
+    font-variant: small-caps;
+    margin-left: 70px;
+    font-weight: bold;
+}
 .shop__border{
-    border: 2px solid black;
-    background-color: #797979;
     display: flex;
     align-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+    border: 1.5px solid black;
+    background-color: #797979;
+    border-radius: 10px;
 }
 .shop__border img{
     width: 150px;
     height: 150px;
+    border-radius: 10px;
+    margin-top: 3px;
+
 }
 .shop__border p{
     color: black;
     font-weight: bolder;
 }
 .conteiner{
-    margin-top: 5px;
+    margin-top: 10px;
 }
-
+.btn{
+    font-variant: small-caps;
+}
+.form-control{
+    width: 500px;
+    border: none;
+    background-color: #797979;
+}
+#menorPrecio{
+    margin-left: 10px;
+    padding: 3px;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: #001278;
+    border: none;
+}
 #btnScroll{
     display: none;
     width: 50px;
@@ -164,25 +227,6 @@
     border-color: rgba(0, 0, 0, 0.2);
 }
 
-#fecha{
-    color: whitesmoke;
-    background-color: #001278;
-    text-align: center;
-    width: 150px;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 4px;
-}
-
-#reloj{
-    color: whitesmoke;
-    background-color: #001278;
-    text-align: center;
-    width: 150px;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 4px;
-}
 /* -------------------------------- TEST PERSONAJES ------------------------------- */
 /* PANTALLA INICIO */
 #pantallaInicial{
